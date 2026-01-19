@@ -1,149 +1,116 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-<meta charset="UTF-8">
-<title>EVALLES</title>
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EVALL ES</title>
 
-<!-- ICON -->
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <!-- Font & Icon -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-<style>
-@keyframes snow {
-  0% {background-position: 0 0;}
-  100% {background-position: 0 1000px;}
-}
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
 
-@keyframes fadeUp {
-  from {opacity: 0; transform: translateY(30px);}
-  to {opacity: 1; transform: translateY(0);}
-}
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: url("bg.jpg") no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+    }
 
-body {
-  margin: 0;
-  font-family: 'Segoe UI', sans-serif;
-  color: white;
-  background:
-    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
-    url("https://i.imgur.com/JVrfEpB.jpg");
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
-}
+    .overlay {
+      width: 100%;
+      min-height: 100vh;
+      background: rgba(0,0,0,0.55);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 30px;
+    }
 
-.snow {
-  position: fixed;
-  top:0; left:0;
-  width:100%; height:100%;
-  background-image: url("https://i.imgur.com/MY5XQ8O.png");
-  animation: snow 20s linear infinite;
-  pointer-events: none;
-}
+    .card {
+      width: 100%;
+      max-width: 420px;
+      text-align: center;
+    }
 
-.container {
-  max-width: 420px;
-  margin: auto;
-  padding: 45px 20px;
-  text-align: center;
-  backdrop-filter: blur(6px);
-  animation: fadeUp 1.2s ease;
-}
+    .avatar {
+      width: 130px;
+      height: 130px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      margin-bottom: 15px;
+    }
 
-.avatar {
-  width: 140px;
-  height: 140px;
-  border-radius: 50%;
-  border: 4px solid white;
-  object-fit: cover;
-  box-shadow: 0 0 25px rgba(255,255,255,0.7);
-}
+    h1 {
+      margin: 10px 0 25px;
+      font-weight: 700;
+      letter-spacing: 2px;
+    }
 
-h1 {
-  margin: 18px 0 28px;
-  letter-spacing: 3px;
-}
+    .link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      text-decoration: none;
+      color: #fff;
+      border: 2px solid rgba(255,255,255,0.8);
+      border-radius: 30px;
+      padding: 14px;
+      margin: 12px 0;
+      font-weight: 500;
+      backdrop-filter: blur(6px);
+      transition: all 0.3s ease;
+    }
 
-.link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 12px;
-  margin: 14px 0;
-  padding: 15px;
-  border-radius: 30px;
-  border: 2px solid white;
-  color: white;
-  text-decoration: none;
-  font-size: 16px;
-  transition: 0.3s;
-  background: rgba(255,255,255,0.1);
-}
-
-.link:hover {
-  background: white;
-  color: black;
-  transform: scale(1.05);
-}
-
-.music {
-  margin-top: 20px;
-  opacity: 0.7;
-}
-
-footer {
-  margin-top: 30px;
-  font-size: 12px;
-  opacity: 0.8;
-}
-</style>
+    .link:hover {
+      background: rgba(255,255,255,0.2);
+      transform: scale(1.03);
+    }
+  </style>
 </head>
-
 <body>
-<div class="snow"></div>
 
-<!-- MUSIK -->
-<audio autoplay loop>
-  <source src="https://files.catbox.moe/7wz2k7.mp3" type="audio/mpeg">
-</audio>
+  <div class="overlay">
+    <div class="card">
 
-<div class="container">
+      <img src="avatar.jpg" alt="Avatar" class="avatar">
+      <h1>EVALL ES</h1>
 
-<img class="avatar" src="https://i.imgur.com/Rx328Nm.jpg" alt="Avatar">
+      <a class="link" href="https://www.facebook.com/" target="_blank">
+        <i class="fab fa-facebook-f"></i> Facebook
+      </a>
 
-<h1>EVALLES</h1>
+      <a class="link" href="https://www.instagram.com/devonallent" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
 
-<a class="link" href="https://www.facebook.com/share/1axqJ7G4my/" target="_blank">
-<i class="fab fa-facebook"></i> Facebook
-</a>
+      <a class="link" href="https://www.tiktok.com/" target="_blank">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
 
-<a class="link" href="https://www.instagram.com/devonallent" target="_blank">
-<i class="fab fa-instagram"></i> Instagram
-</a>
+      <a class="link" href="https://www.youtube.com/" target="_blank">
+        <i class="fab fa-youtube"></i> YouTube
+      </a>
 
-<a class="link" href="https://www.tiktok.com/@devonallent" target="_blank">
-<i class="fab fa-tiktok"></i> TikTok
-</a>
+      <a class="link" href="https://twitter.com/" target="_blank">
+        <i class="fab fa-x-twitter"></i> X (Twitter)
+      </a>
 
-<a class="link" href="https://youtube.com/@evalles5643" target="_blank">
-<i class="fab fa-youtube"></i> YouTube
-</a>
+    </div>
+  </div>
 
-<a class="link" href="https://x.com/DevonAllent" target="_blank">
-<i class="fab fa-x-twitter"></i> X (Twitter)
-</a>
-
-<a class="link" href="https://m.webnovel.com/id/profile/4501128730" target="_blank">
-<i class="fas fa-book"></i> Webnovel
-</a>
-
-<a class="link" href="https://wa.me/qr/WZ3Z7OIWQQOYH1" target="_blank">
-<i class="fab fa-whatsapp"></i> WhatsApp
-</a>
-
-<footer>
-© 2026 EVALLΛES
-</footer>
-
-</div>
 </body>
 </html>
