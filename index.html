@@ -15,7 +15,7 @@ body {
 
 .container {
   min-height: 100vh;
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.65);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -25,7 +25,8 @@ body {
   width: 100%;
   max-width: 380px;
   text-align: center;
-  padding: 20px;
+  padding: 25px;
+  animation: fadeSlide 1.2s ease;
 }
 
 .avatar {
@@ -35,26 +36,63 @@ body {
   object-fit: cover;
   border: 3px solid white;
   margin-bottom: 10px;
+  animation: zoomIn 1.2s ease;
 }
 
 h1 {
   color: white;
-  margin-bottom: 20px;
+  margin-bottom: 18px;
+  animation: fadeIn 1.5s ease;
 }
 
-a {
+.link {
   display: block;
-  margin: 10px 0;
-  padding: 14px;
+  margin: 12px 0;
+  padding: 15px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
   color: white;
-  background: rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, rgba(255,255,255,0.35), rgba(255,255,255,0.15));
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  animation: fadeIn 1.8s ease;
 }
 
-a:hover {
-  background: rgba(255,255,255,0.35);
+.link:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 18px rgba(255,255,255,0.5);
+}
+
+.link:active {
+  transform: scale(0.95);
+}
+
+.qr {
+  margin-top: 22px;
+}
+
+.qr img {
+  width: 120px;
+  border-radius: 12px;
+  background: white;
+  padding: 6px;
+}
+
+/* ANIMATION */
+@keyframes fadeSlide {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes zoomIn {
+  from { opacity: 0; transform: scale(0.8); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
 }
 </style>
 </head>
@@ -66,13 +104,18 @@ a:hover {
     <img src="avatar.jpg" class="avatar">
     <h1>EVALLES</h1>
 
-    <a href="https://www.instagram.com/devonallent" target="_blank">📸 Instagram</a>
-    <a href="https://www.tiktok.com/@devonallent" target="_blank">🎵 TikTok</a>
-    <a href="https://youtube.com/@evalles5643" target="_blank">▶️ YouTube</a>
-    <a href="https://www.facebook.com/share/1axqJ7G4my/" target="_blank">📘 Facebook</a>
-    <a href="https://x.com/DevonAllent" target="_blank">🐦 X / Twitter</a>
-    <a href="https://m.webnovel.com/id/profile/4501128730" target="_blank">📖 Webnovel</a>
-    <a href="https://wa.me/qr/WZ3Z7OIWQQOYH1" target="_blank">💬 WhatsApp</a>
+    <a class="link" href="https://www.instagram.com/devonallent" target="_blank">📸 Instagram</a>
+    <a class="link" href="https://www.tiktok.com/@devonallent" target="_blank">🎵 TikTok</a>
+    <a class="link" href="https://youtube.com/@evalles5643" target="_blank">▶️ YouTube</a>
+    <a class="link" href="https://www.facebook.com/share/1axqJ7G4my/" target="_blank">📘 Facebook</a>
+    <a class="link" href="https://x.com/DevonAllent" target="_blank">🐦 X / Twitter</a>
+    <a class="link" href="https://m.webnovel.com/id/profile/4501128730" target="_blank">📖 Webnovel</a>
+    <a class="link" href="https://wa.me/qr/WZ3Z7OIWQQOYH1" target="_blank">💬 WhatsApp</a>
+
+    <div class="qr">
+      <p style="color:white; font-size:14px;">Scan QR</p>
+      <img src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=https://tekurumoto.github.io/EVALLES.github.io/">
+    </div>
 
   </div>
 </div>
